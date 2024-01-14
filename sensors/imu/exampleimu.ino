@@ -11,7 +11,6 @@ int main(int argc, char** argv)
     ros::Rate loop_rate(50);  
     while(ros::ok())
     {
-
             sensor_msgs::Imu imu_data;
             imu_data.header.stamp = ros::Time::now();
             imu_data.header.frame_id = "base_link";
@@ -29,9 +28,7 @@ int main(int argc, char** argv)
             imu_data.angular_velocity.y = 0.06; 
             imu_data.angular_velocity.z = 0.07;
 
-
             IMU_pub.publish(imu_data);
-
 
         ros::spinOnce();  
         loop_rate.sleep();  
