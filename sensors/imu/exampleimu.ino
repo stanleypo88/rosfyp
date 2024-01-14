@@ -16,7 +16,7 @@ int main(int argc, char** argv)
             imu_data.header.stamp = ros::Time::now();
             imu_data.header.frame_id = "base_link";
         // Test a fixed value of orientation
-           imu_data.orientation.x = 0;
+            imu_data.orientation.x = 0;
             imu_data.orientation.y = -1;
             imu_data.orientation.z = -5;
             imu_data.orientation.w = 6;
